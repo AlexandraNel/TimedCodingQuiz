@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+    --purpleBase: #5603ad;
+    --purpleHighlight: #8267c6;
+    --greenBase: #b3e9c7;
+    --greenHighlight: #c3f8cc;
+    --background: #f1fff2;
+    --text: #393043;
+}
+
+nav{
+
+}
+
+section{
+
+}
+
+ul{
+
+}
+
+h1{
+
+}
+
+p{
+
+}
+
+a{
+
+}
+
+#high-scores {
+
+}
+
+#countdown{
+
+}
+
+@media screen and (max-width: 600px) {
+    
+}

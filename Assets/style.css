@@ -182,6 +182,7 @@ button:active {
     background-color: var(--purpleBase);
 }
 
+
 /* highscores styling */
 #high-scores{
     display: flex;
@@ -203,9 +204,9 @@ I want the returned lines to alternate bewteen styling, I am using nth child to 
   
 }
 
-#countdown {
+#timer {
     color: var(--greenBase);
-    font-size: 20px;
+    font-size: 30px;
 
 }
 

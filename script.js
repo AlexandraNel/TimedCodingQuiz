@@ -3,6 +3,7 @@ var startGame = document.querySelector("#startGame"); //getting id for start but
 var timerDisplay= document.querySelector("#timer"); //getting id for countdown timer
 var secondsLeft= 76; //seconds left initialise the timer
 var mainEl= document.querySelector("#main"); //getting id for the body for quiz
+var quizContainer = document.querySelector("#quizContainer");
 
 
 //event listener to start game/timer on button click
@@ -44,10 +45,9 @@ function sendMessage() {
 
 //QUIZ FUNCTION BELOW
 
-var question= document.createElement("h1"); //creating the questions style
-var optionsList= document.createElement("ul"); //createing a list for the answer options to keep them together
+//creating an array
+//placing each question, answer options, and correct answer within objects, within the array
 
-//creating an array, placing each question, answer options, and correct answer within objects, within the array
 var myQuestions = [
     {
         question: "Inside which HTML element do we put the JavaScript tag?",
@@ -105,10 +105,54 @@ var myQuestions = [
 }
 ]
 
+var currentQuestionIndex= 0; //creating an index for each question in the array so we 
+//can manage going through it one at a time
 
  function generateQuiz(){
-  for(var i=0; i< myQuestions.length; i++) {
-    var questionObj=
+
+  //clear the previous question/ area for new question
+  quizContainer.innerHTML=""; 
+
+  //generate the highscores input form when all questions are complete
+  if(currentQuestionIndex <= myQuestions.length){
+    var enterHighScore = document.createElement("form");
+    return;
+  }
+
+  //question object is the specific indexed question within the myQuestionArray
+  var questionObj= myQuestions[currentQuestionIndex];
+  var questionElement= document.createElement("h1"); //generate an h1 for the question
+  questionElement.textContent = questionObj.question; //grab the question string from the object
+  
+  var optionsList = document.createElement("ul"); //generate an h1 for the question
+  
+  for(var key in questionObj.answers){ //using a for-in loop as my questions exist within an object
+    var listItem = document.createElement("li");//createing a list item for each answer option and its radio button
+
+    var radioButton = document.createElement("input"); //creating the radio buttons to select the correct answer to a question
+    radioButton.setAttribute("type", "radio"); //setting the type to radio- radio buttons can only have one selected
+    radioButton.setAttribute("name", "question"); //setting the name of a group of these radio buttons to the question they are allocated to (ensuring only one can be chosen correctly in a question group)
+    radioButton.setAttribute("value", "key"); //assigning a value to the radio button- being the key of the obj item /or answer option
+    radioButton.setAttribute("id", "option-"+ key); //this creates a unique id for each radio button ie. "option-a" or "option-b" allowing me to target each uniquely
+
+    var answerOption=document.createElement("label"); //this is the part of the ul that sits next to the radio button- the answer/option itself
+    answerOption.setAttribute("for", "option-"+ key) //"for" explicitly links the answer option to the radio button using the id that we previously created
+    answerOption.textContent=questionObj.answers[key]//setting the text to the array-object-object where I stored the asnwers 
+
+  listItem.appendChild(radioButton); //add the radio buttons to the html id tag
+  listItem.appendChild(answerOption); //add the answer options to the html id tag
+  optionsList.appendChild(listItem); //add the <ul> list items to the html id tag 
+  }
+
+
+
+
+
+  
+  quizContainer.appendChild(questionElement); //add the question to the html id tag 
+  quizContainer.appendChild(optionsList);
+  for(var i=0; i< myQuestions.length; i++) { //for loop to go through each question
+    
   
 }
 

@@ -96,7 +96,7 @@ p {
 
 a {
     color: var(--greenBase);
-    font-size: 20px;
+    font-size: 30px;
 }
 
 /* hover pseudo element over anchor tags, repeated effect to increase boldness */

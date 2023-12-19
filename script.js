@@ -6,8 +6,8 @@ var mainEl= document.querySelector("#main"); //getting id for the body for quiz
 
 
 //event listener to start game/timer on button click
-startGame.addEventListener("click", function(event) {
-    event.preventDefault();
+startGame.addEventListener("click", function(event) { //adds event listener to my startGame button
+    event.preventDefault(); //prevents any default action ie. full page refresh
     setTime(); //start the timer on this event listener
     generateQuiz(); //start the quiz on this event listener
 });
@@ -17,7 +17,7 @@ function setTime() {
   // Sets interval in variable
   var timerInterval = setInterval(function() {
     secondsLeft--;
-    timerDisplay.textContent = "Timer:" + secondsLeft;
+    timerDisplay.textContent = "Timer: " + secondsLeft;
 
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
@@ -44,6 +44,10 @@ function sendMessage() {
 
 //QUIZ FUNCTION BELOW
 
+var question= document.createElement("h1"); //creating the questions style
+var optionsList= document.createElement("ul"); //createing a list for the answer options to keep them together
+
+//creating an array, placing each question, answer options, and correct answer within objects, within the array
 var myQuestions = [
     {
         question: "Inside which HTML element do we put the JavaScript tag?",
@@ -64,24 +68,56 @@ var myQuestions = [
             c: "Inside either the head or the body element",
             d: "Just before the /html tag"
         },
-        correctAnswer: "c"
+        correctAnswer: "a"
     },
 
-        
-    },
-    "How do you call a function named myFunction in Javascript?",
-    "What does ul stand for in html?",
-    "How to write an IF statement in JavaScript?",
+    {
+      question: "What does <ul> stand for in html?",
+      answers: {
+          a: "unlimited",
+          b: "unique line",
+          c: "unordered list",
+          d: "underlined"
+      },
+      correctAnswer: "c"
+  },
 
+  {
+    question: "How to write an IF statement in JavaScript?",
+    answers: {
+        a: "if condition ()",
+        b: "if (condition)",
+        c: "if = condition",
+        d: "if = (condition)"
+    },
+    correctAnswer: "b"
+},
+
+{
+  question: "How do you select an element with the id 'demo?', in CSS",
+  answers: {
+      a: ".demo",
+      b: "=demo",
+      c: "demo",
+      d: "#demo"
+  },
+  correctAnswer: "d"
+}
 ]
+
+
  function generateQuiz(){
+  for(var i=0; i< myQuestions.length; i++) {
+    var questionObj=
+  
+}
+
 
  }
 
 
 
 
-//need my questions and answers to be in an array or an object
 //need if else statements for correct or incorrect answers
 
 

@@ -67,7 +67,7 @@ ul {
     list-style-type: none;
     /*removes bullet points*/
     display: flex;
-}
+   }
 
 /* targets our section elements */
 h1 {
@@ -130,6 +130,14 @@ button:hover {
 button:active {
     background-color: var(--purpleBase);
     box-shadow: 0px 0px 30px 10px var(--greenHighlight);
+}
+
+/* creating a style for the little message that pops up incorrect/correct */
+cite{ 
+    text-decoration: overline;
+    font-weight:200;
+    font-size: 15px;
+
 }
 
 .logo {
@@ -207,9 +215,22 @@ I want the returned lines to alternate bewteen styling, I am using nth child to 
 #timer {
     color: var(--greenBase);
     font-size: 30px;
-
 }
 
+#quizContainer h2{ /* styling quiz questions */
+    width: 50%;
+}
+
+#quizContainer ul{ /* styling quiz questions */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px 50px 10px;
+    line-height: 3;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 20px;
+}
 /* targeting he clear button on the highscores page specifically for javascript */
 #clear {}
 

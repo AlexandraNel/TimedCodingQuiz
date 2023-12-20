@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>High Scores</title>
+    <!-- Little logo icon on the window for branding -->
+    <link rel="icon" type="image/png" href="./Assets/icon-512x512.png">
+    </link>
+    <link rel="stylesheet" href="./Assets/style.css">
 </head>
+
 <body>
-    
+    <!-- Navigation bar for game link, home logo, and countdown timer -->
+    <nav>
+        <ul>
+            <li><a href="./index.html"> Back To Game</a> </li> <!-- Links to game index html -->
+            <li> <a href="./index.html"> <img src="./Assets/icon-512x512.png" alt="Timed Coding Quiz Logo"
+                        class="logo"></a></li>
+            <!-- Logo home image, added class directly to logo to allow resizing, links back to index -->
+            <li id="countdown"> </li> <!-- id tag for targetting in javascript for game countdown -->
+        </ul>
+    </nav>
+
+    <!-- Section tag (symantic language) for welcome message and start button -->
+    <section>
+        <h1>High Scores</h1> <!-- Main heading -->
+        <!-- ul with id tag for javascript input -->
+        <ul id="high-scores">
+            
+        </ul>
+    </section>
+
+    <!-- A new section just for the buttons -->
+    <section class="button-section">
+        <!-- Return to Game, an danchor tag doesnt work inside a button, therefore this anchor href is given a button style class -->
+        <a href="./index.html" class="anchor-button-style"> Back </a>
+        <!-- Clear High Scores -->
+        <button id="clear">Clear</button>
+    </section>
+
 </body>
+
 </html>

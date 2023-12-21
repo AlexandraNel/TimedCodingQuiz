@@ -29,6 +29,8 @@ This application was an activity in allowing me to explore the application of ja
 
 ## Visuals
 
+![Quiz Website](./Assets/timedCodeQuizVisuals.gif)
+
 ## Installation
 
 Website has been deployed and is available from this link:

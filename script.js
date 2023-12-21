@@ -186,7 +186,7 @@ questionObj= myQuestions[currentQuestionIndex];   //question object is the speci
 //Keep Score 
 function userResults(){
   var highScore = JSON.parse(localStorage.getItem("scores")) || []; //pull out existing score info from local storage unless theer are none, then its an array
-  var newScore= { userName, keepScore}; //create new score object
+  var newScore= {userName, keepScore}; //create new score object
   highScore.push(newScore); //put the new score info in the highscore with the others
 
   localStorage.setItem("scores", JSON.stringify(highScore));

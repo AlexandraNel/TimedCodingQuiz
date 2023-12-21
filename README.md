@@ -27,17 +27,17 @@ They can also clear the high scores, using a button on this page.
 
 This application was an activity in allowing me to explore the application of javascript to an interactive website
 
-##Visuals
+## Visuals
 
-##Installation
+## Installation
 
 Website has been deployed and is available from this link:
 
-[Quiz Website]()
+[Quiz Website](https://alexandranel.github.io/TimedCodingQuiz/)
 
 Full repository can be accessed here:
 
-[Git Repository]()
+[Git Repository](https://github.com/AlexandraNel/TimedCodingQuiz/)
 
 ``````
 To view repo contents please navigate to the above link there you will find
@@ -64,9 +64,23 @@ info@alexandranel.com
 Moving forward the following improvments can be made
 
 -localStorage needs to be refined so that when access the highscores from the index page, they exist there already.
+-local.storage does not seem to persist beyond refresh reqires debug
 -The questions can be extended out to incude more
 -The questions could also be optimised to generate randomly between the index instead of sequentially
--The radio buttons can be styled in teh css to look more interesting
+-The radio buttons can be styled in the css to look more interesting
+
+## Authors and Acknowledgment
+
+This website was made under the guidance and with assistance from 
+-the team at MONAH UNI full Stack Dev Bootcamp
+-Instructor Chee Ho Tai 
+-TA Pranita Shrestha 
+-Tutor Meg Meyers
+-Debug and tutor Chat GPT
+
+## License
+MIT License
+
 
 
 

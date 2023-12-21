@@ -15,5 +15,6 @@ for(i=0; i<highScore.length; i++){ //here we create the for loop to go through a
 var clearButton = document.getElementById("clear"); //grabbing the clear button from the html ifd for use
 
 clearButton.addEventListener("click", function() { //event listener for clearing the local storage on click
-    localStorage.clear();
+    localStorage.clear(); //clear the local storage info
+    document.querySelector("ol").innerHTML=""; //clear the hishscores list
 });
